@@ -20,7 +20,7 @@ if dataset and st.session_state.get("selected_dataset") != dataset:
 
 if dataset and not st.session_state.get("redirected", False):
     st.session_state["redirected"] = True
-    st.switch_page("pages/Summary.py")
+    st.switch_page("pages/summary.py")
 
 
 
