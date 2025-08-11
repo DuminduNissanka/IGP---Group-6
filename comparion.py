@@ -9,8 +9,11 @@ st.set_page_config(page_title="Dataset Comparison", layout="wide")
 st.title("📊 Comparison: Group vs Individual Assignment Behavior")
 
 # File Paths 
-path1 = Path("C:/Users/DuminduS/Desktop/UWE/IGP/Project/Code/DatasetforStreamlit/cleaned_Newdata01.xlsx")  # Group
-path2 = Path("C:/Users/DuminduS/Desktop/UWE/IGP/Project/Code/DatasetforStreamlit/cleaned_new2_revised_2.xlsx")  # Individual
+BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data"
+
+path1 = DATA_DIR / "cleaned_Newdata01.xlsx"
+path2 = DATA_DIR / "cleaned_new2_revised_2.xlsx"
 
 try:
     # Load all sheets and tag by week
