@@ -8,8 +8,9 @@ from pathlib import Path
 st.set_page_config(page_title="Dataset Comparison", layout="wide")
 st.title("📊 Comparison: Group vs Individual Assignment Behavior")
 
-# File Paths 
-BASE_DIR = Path(__file__).resolve().parent
+
+# Go one level up from 'pages' to the repo root
+BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 
 path1 = DATA_DIR / "cleaned_Newdata01.xlsx"
