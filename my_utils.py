@@ -15,9 +15,15 @@ def get_dataset_by_selection(selection):
     """
     Return dataset and sheet names based on sidebar selection.
     """
+    from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data"
+
+def get_dataset_by_selection(selection):
     if selection == "Individual Based Engagement":
-        return load_excel("C:/Users/DuminduS/Desktop/UWE/IGP/Project/Code/DatasetforStreamlit/cleaned_new2_revised_2.xlsx")
+        return load_excel(DATA_DIR / "cleaned_new2_revised_2.xlsx")
     elif selection == "Group Based Engagement":
-        return load_excel("C:/Users/DuminduS/Desktop/UWE/IGP/Project/Code/DatasetforStreamlit/cleaned_Newdata01.xlsx")
+        return load_excel(DATA_DIR / "cleaned_Newdata01.xlsx")
     else:
         return None, None
